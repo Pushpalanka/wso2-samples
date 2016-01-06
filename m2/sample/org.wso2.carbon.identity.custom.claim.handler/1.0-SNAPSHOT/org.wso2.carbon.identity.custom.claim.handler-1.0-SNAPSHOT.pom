@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>sample</groupId>
+    <artifactId>org.wso2.carbon.identity.custom.claim.handler</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+    <!-- WSO2 released artifact repository -->
+    <repository>
+        <id>wso2.releases</id>
+        <name>WSO2 Releases Repository</name>
+        <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+        <releases>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>ignore</checksumPolicy>
+        </releases>
+    </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.carbon.identity</groupId>
+            <artifactId>org.wso2.carbon.identity.application.authentication.framework</artifactId>
+            <version>5.0.7</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

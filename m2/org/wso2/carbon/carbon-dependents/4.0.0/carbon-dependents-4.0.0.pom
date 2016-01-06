@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>platform-parent</artifactId>
+        <version>4.0.0</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>carbon-dependents</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Platform Dependent Projects</name>
+    <description>WSO2 Carbon Platform dependent projects</description>
+    <url>http://wso2.org</url>
+
+    <build>
+        <plugins>
+            <plugin> 
+		<groupId>org.jvnet.maven.incrementalbuild</groupId> 
+		<artifactId>incremental-build-plugin</artifactId>
+		<version>1.3</version>
+		<executions> 
+		    <execution> 
+		        <goals> 
+			    <goal>incremental-build</goal>
+			</goals>
+		    </execution> 
+		</executions> 
+	    </plugin>
+        </plugins>
+    </build>
+
+            <modules>
+                <module>commons-vfs/2.0-wso2v4</module>
+                <module>commons/balana/1.0.0-wso2v1</module>
+		<module>commons/siddhi/1.0.0-wso2v1</module>
+		<module>commons/throttle/3.3.0-wso2v1</module>
+		<module>commons/charon/1.0.0-wso2v1</module>
+		<module>commons/wsdlvalidator/1.2.0-wso2v1</module>
+		<module>commons/xfer/3.3.0</module>
+                <module>e4ximpl/2.0.1.wso2v1</module>
+                <module>maven-scm-provider-svnexe/1.7.0-wso2v1</module>
+                <module>ode/1.3.5-wso2v5</module>
+                <module>qpid/0.12-wso2v1</module>
+                <module>rampart/1.6.1-wso2v4</module>
+                <module>sandesha/1.6.1-wso2v2</module>
+                <module>svnclient/1.6.18.wso2v1</module>
+		<module>synapse/2.1.0-wso2v6</module>
+		<module>thrift/0.5.0-wso2v1</module>
+		<module>webharvest/2.0-wso2v2</module>	
+		<module>andes/0.13.0-wso2v1</module>
+                <module>snappy-java/1.0.4.1-wso2v1</module>
+		<module>datanucleus/3.0.1-wso2v1</module>
+		<module>amber/0.22.1358727-wso2v1</module>
+		<!--module>cassandra/1.1.0-wso2v2</module-->
+		<!--module>hive/0.8.1-wso2v3</module-->
+		<!--module>hadoop/0.20.203.1-wso2v1</module-->
+                <!--module>hector/0.7.0.23-wso2v1</module-->
+                <!--module>httpcore-nio/4.1.3-wso2v2/</module-->
+
+		<!-- orbit/modules -->
+
+                <module>orbit/cassandra-jdbc/1.1.1.wso2v1</module>
+                <module>orbit/commons-vfs/2.0.wso2v4</module>
+                <module>orbit/libthrift/0.5.wso2v1</module>
+                <module>orbit/libthrift/0.6.1.wso2v1</module>
+		<module>orbit/libthrift/0.7.wso2v1</module>
+		<module>orbit/libthrift/0.8.0.wso2v1</module>
+                <module>orbit/maven-scm/1.7.0.wso2v1</module>
+		<module>orbit/mvel2/2.0.19.wso2v1</module>
+                <module>orbit/ode/1.3.5.wso2v5</module>
+                <module>orbit/qpid/0.12.wso2v1</module>
+                <module>orbit/qpid-client/0.12.wso2v1</module>
+                <module>orbit/rampart-core/1.6.1.wso2v4</module>
+                <module>orbit/rampart-policy/1.6.1.wso2v4</module>
+                <module>orbit/rampart-trust/1.6.1.wso2v4</module>
+		<module>orbit/siddhi/1.0.0.wso2v1</module>
+                <module>orbit/webharvest/2.0.0.wso2v2</module>
+                <module>orbit/wsdl-validator/1.2.0.wso2v1</module>
+		<module>orbit/andes/0.13.0.wso2v1</module>
+		<module>orbit/andes-client/0.13.0.wso2v1</module>
+		<module>orbit/snappy-java/1.0.4.1.wso2v1</module>
+		<module>orbit/datanucleus-core/3.0.1-wso2v1</module>
+		<module>orbit/amber/0.22.1358727.wso2v1</module>
+                <!--module>orbit/cassandra</module-->
+		<!--module>orbit/hive</module-->
+                <!--module>orbit/shindig</module-->
+                <!--module>orbit/hector</module-->
+		<!--module>orbit/hadoop-core</module-->
+	     </modules>
+   <dependencyManagement>
+	<dependencies>
+		<dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.framework</artifactId>
+                <version>1.0.3</version>
+            </dependency>
+	</dependencies>
+   </dependencyManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<axis2.version>1.6.1-wso2v5</axis2.version>
+    </properties>
+
+</project>
+
